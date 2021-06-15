@@ -6,13 +6,10 @@ switch($component){
 <section class="content-header">
     <div class="container-fluid">
         <div class="row mb-2">
-            <div class="col-sm-6">
-                <h1>Tambah Data</h1>
-            </div>
-            <div class="col-sm-6">
-                <ol class="breadcrumb float-sm-right">
+        <div class="col-sm-12">
+                <ol class="breadcrumb float-sm-left">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a href="?page=berkas">Penduduk</a></li>
+                    <li class="breadcrumb-item"><a href="?page=penduduk">Penduduk</a></li>
                     <li class="breadcrumb-item active">Tambah Data</li>
                 </ol>
             </div>
@@ -107,11 +104,8 @@ if(isset($_POST['simpan_penduduk'])){
 <section class="content-header">
     <div class="container-fluid">
         <div class="row mb-2">
-            <div class="col-sm-6">
-                <h1>Edit Data</h1>
-            </div>
-            <div class="col-sm-6">
-                <ol class="breadcrumb float-sm-right">
+        <div class="col-sm-12">
+                <ol class="breadcrumb float-sm-left">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
                     <li class="breadcrumb-item"><a href="?page=berkas">Penduduk</a></li>
                     <li class="breadcrumb-item active">Edit Data Penduduk</li>
@@ -204,11 +198,8 @@ if(isset($_POST['simpan_penduduk'])){
 <section class="content-header">
     <div class="container-fluid">
         <div class="row mb-2">
-            <div class="col-sm-6">
-                <h1>Penduduk</h1>
-            </div>
-            <div class="col-sm-6">
-                <ol class="breadcrumb float-sm-right">
+        <div class="col-sm-12">
+                <ol class="breadcrumb float-sm-left">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
                     <li class="breadcrumb-item ">Penduduk</li>
                     <li class="breadcrumb-item active">Data Penduduk</li>

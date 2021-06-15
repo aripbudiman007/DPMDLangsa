@@ -1,10 +1,10 @@
 <section class="content-header">
     <div class="container-fluid">
         <div class="row mb-2">
-        <div class="col-sm-12">
+            <div class="col-sm-12">
                 <ol class="breadcrumb float-sm-left">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active">Welcome</li>
+                    <li class="breadcrumb-item active">Profile</li>
                 </ol>
             </div>
         </div>
@@ -16,7 +16,7 @@
     <!-- Default box -->
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Title</h3>
+            <h3 class="card-title">Your Profile</h3>
             <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
                 <i class="fas fa-minus"></i></button>
@@ -25,13 +25,34 @@
             </div>
         </div>
         <div class="card-body">
-            Start creating your amazing application!
+            <table class="table">
+                <tr>
+                    <td width="25%">NIK</td>
+                    <td>: 32072817069400004</td>
+                </tr>
+                <tr>
+                    <td>Nama Lengkap</td>
+                    <td>: Budiman Santoso</td>
+                </tr>
+                <tr>
+                    <td>Jenis Kelamin</td>
+                    <td>: Bandung</td>
+                </tr>
+                <tr>
+                    <td>Tempat Lahir</td>
+                    <td>: Bandung</td>
+                </tr>
+                <tr>
+                    <td>Tanggal Lahir</td>
+                    <td>: Budiman Santoso</td>
+                </tr>
+                <tr>
+                    <td>Alamat</td>
+                    <td>: Budiman Santoso</td>
+                </tr>
+            </table>
         </div>
         <!-- /.card-body -->
-        <div class="card-footer">
-            Footer
-        </div>
-        <!-- /.card-footer-->
     </div>
     <!-- /.card -->
 </section>

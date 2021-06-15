@@ -6,11 +6,8 @@ switch($component){
 <section class="content-header">
     <div class="container-fluid">
         <div class="row mb-2">
-            <div class="col-sm-6">
-                <h1>Tambah Data</h1>
-            </div>
-            <div class="col-sm-6">
-                <ol class="breadcrumb float-sm-right">
+            <div class="col-sm-12">
+                <ol class="breadcrumb float-sm-left">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
                     <li class="breadcrumb-item"><a href="?page=berkas">Berkas</a></li>
                     <li class="breadcrumb-item active">Tambah Data</li>
@@ -86,11 +83,8 @@ if(isset($_POST['simpan_berkas'])){
 <section class="content-header">
     <div class="container-fluid">
         <div class="row mb-2">
-            <div class="col-sm-6">
-                <h1>Edit Data</h1>
-            </div>
-            <div class="col-sm-6">
-                <ol class="breadcrumb float-sm-right">
+            <div class="col-sm-12">
+                <ol class="breadcrumb float-sm-left">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
                     <li class="breadcrumb-item"><a href="?page=berkas">Berkas</a></li>
                     <li class="breadcrumb-item active">Edit Data</li>
@@ -162,11 +156,8 @@ if(isset($_POST['simpan_berkas'])){
 <section class="content-header">
     <div class="container-fluid">
         <div class="row mb-2">
-            <div class="col-sm-6">
-                <h1>Berkas</h1>
-            </div>
-            <div class="col-sm-6">
-                <ol class="breadcrumb float-sm-right">
+            <div class="col-sm-12">
+                <ol class="breadcrumb float-sm-left">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
                     <li class="breadcrumb-item ">Berkas</li>
                     <li class="breadcrumb-item active">Data Berkas</li>

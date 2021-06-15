@@ -19,6 +19,8 @@
 
                 $_SESSION['username'] = $log->get_login("username");
                 $_SESSION['password'] = $log->get_login("password");
+                $_SESSION['level'] = $log->get_login("level");
+                $_SESSION['nik'] = $log->get_login("nik");
                 header("location:./../");
             } else { ?>
                 <script type="text/javascript">

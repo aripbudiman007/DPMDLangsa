@@ -9,6 +9,8 @@ class Penduduk {
     private $tanggal_lahir;
     private $alamat;
     private $status;
+    private $berkas;
+    private $jenis_berkas;
 
     function koneksi(){
         $db = new Connection();
@@ -46,6 +48,14 @@ class Penduduk {
         $this->status = $status;
     }
 
+    public function set_berkas($berkas){
+        $this->berkas = $berkas;
+    }
+
+    public function set_jenis_berkas($jenis_berkas){
+        $this->jenis_berkas = $jenis_berkas;
+    }
+
     public function get_nik(){
         return $this->nik;
     }
@@ -72,6 +82,14 @@ class Penduduk {
 
     public function get_status(){
         return $this->status;
+    }
+
+    public function get_berkas(){
+        return $this->berkas;
+    }
+
+    public function get_jenis_berkas(){
+        return $this->jenis_berkas;
     }
 
     function get_data_penduduk(){
@@ -133,6 +151,74 @@ class Penduduk {
         }else{
             redirectJS("?page=penduduk&msg=gagal");
         }
+    }
+
+    function upload_ktp(){
+        $lokasi_file    = $_FILES['ktp'] ['tmp_name'];
+        $nama_file      = $_FILES['ktp'] ['name'];
+        $direktori      = "./uploads/ktp/$nama_file";
+
+        if(!empty($lokasi_file)){
+            move_uploaded_file($lokasi_file, $direktori);
+            $sql = "INSERT INTO tb_berkas_penduduk (nik, berkas, jenis_berkas) VALUES ('".$this->get_nik()."','".$nama_file."','".$this->get_jenis_berkas()."')";
+            $query = $this->koneksi()->query($sql);
+
+            if($query) {
+                redirectJS("?page=berkas_pribadi&msg=berhasil");
+            }else{
+                redirectJS("?page=berkas_pribadi&msg=gagal");
+            }
+        }
+    }
+
+    function upload_kk(){
+        $lokasi_file    = $_FILES['kk'] ['tmp_name'];
+        $nama_file      = $_FILES['kk'] ['name'];
+        $direktori      = "./uploads/kk/$nama_file";
+
+        if(!empty($lokasi_file)){
+            move_uploaded_file($lokasi_file, $direktori);
+            $sql = "INSERT INTO tb_berkas_penduduk (nik, berkas, jenis_berkas) VALUES ('".$this->get_nik()."','".$nama_file."','".$this->get_jenis_berkas()."')";
+            $query = $this->koneksi()->query($sql);
+
+            if($query) {
+                redirectJS("?page=berkas_pribadi&msg=berhasil");
+            }else{
+                redirectJS("?page=berkas_pribadi&msg=gagal");
+            }
+        }
+    }
+
+    function upload_akte(){
+        $lokasi_file    = $_FILES['akte'] ['tmp_name'];
+        $nama_file      = $_FILES['akte'] ['name'];
+        $direktori      = "./uploads/akte/$nama_file";
+
+        if(!empty($lokasi_file)){
+            move_uploaded_file($lokasi_file, $direktori);
+            $sql = "INSERT INTO tb_berkas_penduduk (nik, berkas, jenis_berkas) VALUES ('".$this->get_nik()."','".$nama_file."','".$this->get_jenis_berkas()."')";
+            $query = $this->koneksi()->query($sql);
+
+            if($query) {
+                redirectJS("?page=berkas_pribadi&msg=berhasil");
+            }else{
+                redirectJS("?page=berkas_pribadi&msg=gagal");
+            }
+        }
+    }
+
+    function get_status_berkas($nik, $jenis_berkas){
+        $sql = "SELECT jenis_berkas FROM tb_berkas_penduduk WHERE nik='".$nik."' AND jenis_berkas='".$jenis_berkas."'";
+        $query = $this->koneksi()->query($sql);
+        $data = $query->fetch_array();
+        $row = $query->num_rows;
+
+        // if($row > 0){
+            return true;
+        // }else {
+        //     return 'error';
+        // }
+
     }
 }
 ?>

@@ -45,6 +45,8 @@ class Login{
 
       if($field == "username"){return $data['username'];}
       elseif($field == "password"){return $data['password'];}
+      elseif($field == "nik"){return $data['nik'];}
+      elseif($field == "level"){return $data['level'];}
     }
 
 }

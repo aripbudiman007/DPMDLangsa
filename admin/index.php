@@ -62,7 +62,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <a href="index3.html" class="brand-link">
       <img src="./assets/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
-      <span class="brand-text font-weight-light">AdminLTE 3</span>
+      <span class="brand-text font-weight-light">Admin Pages</span>
     </a>
 
     <!-- Sidebar -->
@@ -90,6 +90,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </p>
             </a>
           </li>
+          <?php
+            if($_SESSION['level'] == 1){
+          ?>
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -130,18 +133,27 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </li>
             </ul>
           </li>
+          <?php }else if($_SESSION['level'] == 2){ ?>
           <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+            <a href="?page=profile" class="nav-link">
+              <i class="nav-icon fas fa-user"></i>
               <p>
-                Simple Link
-                <span class="right badge badge-danger">New</span>
+                Profile
               </p>
             </a>
           </li>
           <li class="nav-item">
+            <a href="?page=berkas_pribadi" class="nav-link">
+              <i class="nav-icon fas fa-file"></i>
+              <p>
+                Berkas Pribadi
+              </p>
+            </a>
+          </li>
+          <?php } ?>
+          <li class="nav-item">
             <a href="./login/logout.php" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <i class="nav-icon fas fa-sign-out-alt"></i>
               <p>
                 Logout
               </p>
