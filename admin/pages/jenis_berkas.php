@@ -49,7 +49,7 @@
             </div>
         </div>
         <div class="card-body">
-            <a href="#" class="btn btn-success btn-sm" data-toggle="modal" data-target="#modal-add"><span class="fa fa-plus" ></span> Tambah Berkas Baru</a><br><br>
+            <a href="#" class="btn btn-success btn-sm" data-toggle="modal" data-target="#modal-add"><span class="fa fa-plus" ></span> Tambah Jenis Berkas</a><br><br>
             <table class="table table-bordered" id="data-table">
                 <thead>
                     <tr>

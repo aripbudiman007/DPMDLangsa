@@ -1,8 +1,16 @@
 <?php 
     include("./include/redirect.php");
     include("./model/model_berkas.php");
+    include("./model/model_penduduk.php");
 
     $berkas = new Berkas();
+    $penduduk = new Penduduk();
+    session_start();
+    if(empty($_SESSION['username']) AND  empty ($_SESSION['password'])){
+
+        redirectJS("./login/login.php");
+
+    }else{
 ?>
 <!DOCTYPE html>
 <!--
@@ -92,14 +100,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="?page=penduduk" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Input Data Penduduk</p>
+                  <p>Data Penduduk</p>
                 </a>
               </li>
             </ul>
           </li>
-          <li class="nav-item has-treeview menu-open">
+          <li class="nav-item has-treeview">
             <a href="?page=berkas" class="nav-link">
               <i class="nav-icon fas fa-file"></i>
               <p>
@@ -128,6 +136,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <p>
                 Simple Link
                 <span class="right badge badge-danger">New</span>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="./login/logout.php" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Logout
               </p>
             </a>
           </li>
@@ -189,3 +205,4 @@ scratch. This page gets rid of all links and provides the needed markup only.
 </script>
 </body>
 </html>
+<?php } ?>

@@ -210,7 +210,7 @@ if(isset($_POST['simpan_berkas'])){
         </div>
         <div class="card-body">
             <a href="?page=berkas&component=tambah" class="btn btn-success btn-sm"><span class="fa fa-plus"></span> Tambah Berkas Baru</a><br><br>
-            <table class="table table-bordered ">
+            <table class="table table-bordered " id="data-table">
                 <thead>
                     <tr>
                         <th width="7%">No</th>

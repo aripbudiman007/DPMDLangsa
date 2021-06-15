@@ -1,3 +1,33 @@
+<?php
+    include_once("../model/class_login.php");
+
+    $log = new Login();
+
+    if(isset($_POST['login'])){
+        $log->set_username($_POST['username']);
+        $log->set_password(md5($_POST['password']));
+
+        $cek = $log->cek_login();
+
+        if($cek == 0){ ?>
+            <script type="text/javascript">
+                alert('Belum Terdaftar');
+            </script>
+         <?php } else { 
+             if(($log->get_username() == $log->get_login("username")) AND ($log->get_password() == $log->get_login("password"))){
+                session_start(); 
+
+                $_SESSION['username'] = $log->get_login("username");
+                $_SESSION['password'] = $log->get_login("password");
+                header("location:./../");
+            } else { ?>
+                <script type="text/javascript">
+                alert('Username / Password Salah')
+                </script>
+            <?php } 
+        } 
+    }
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,7 +58,7 @@
     <div class="card-body login-card-body">
       <p class="login-box-msg">DPMG Koata Langsa</p>
 
-      <form action="../../index3.html" method="post">
+      <form action="" method="POST">
         <div class="input-group mb-3">
           <input type="text" name="username" class="form-control" placeholder="Username">
           <div class="input-group-append">
