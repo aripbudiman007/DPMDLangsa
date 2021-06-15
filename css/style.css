@@ -1,0 +1,420 @@
+/*--------------------------------------------------------------------- File Name: style.css ---------------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------------- import Fonts ---------------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+
+/*****---------------------------------------- 1) font-family: 'Rajdhani', sans-serif;
+ 2) font-family: 'Poppins', sans-serif;
+ ----------------------------------------*****/
+
+
+/*--------------------------------------------------------------------- import Files ---------------------------------------------------------------------*/
+
+@import url(animate.min.css);
+@import url(normalize.css);
+@import url(meanmenu.css);
+@import url(owl.carousel.min.css);
+@import url(slick.css);
+@import url(jquery-ui.css);
+@import url(nice-select.css);
+
+/*--------------------------------------------------------------------- skeleton ---------------------------------------------------------------------*/
+
+* {
+     box-sizing: border-box !important;
+     transition: ease all 0.5s;
+}
+
+html {
+     scroll-behavior: smooth;
+}
+
+body {
+     color: #666666;
+     font-size: 14px;
+      font-family: poppins;
+     line-height: 1.80857;
+     font-weight: normal;
+     overflow-x: hidden;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+     letter-spacing: 0;
+     font-weight: normal;
+     position: relative;
+     padding: 0 0 10px 0;
+     font-weight: normal;
+     line-height: normal;
+     color: #111111;
+     margin: 0
+}
+
+h1 {
+     font-size: 24px
+}
+
+h2 {
+     font-size: 22px
+}
+
+h3 {
+     font-size: 18px
+}
+
+h4 {
+     font-size: 16px
+}
+
+h5 {
+     font-size: 14px
+}
+
+h6 {
+     font-size: 13px
+}
+
+*,
+*::after,
+*::before {
+     -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+     box-sizing: border-box;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+     color: #212121;
+     text-decoration: none!important;
+     opacity: 1
+}
+
+button:focus {
+     outline: none;
+}
+
+a {
+     color: #fffefe;
+     text-decoration: none;
+     display: inline;
+     outline: none !important;
+}
+
+img {
+     max-width: 100%;
+     height: auto;
+}
+/*---------------------------- preloader area ----------------------------*/
+
+.loader_bg {
+     position: fixed;
+     z-index: 9999999;
+     background: #fff;
+     width: 100%;
+     height: 100%;
+}
+
+.loader {
+     height: 100%;
+     width: 100%;
+     position: absolute;
+     left: 0;
+     top: 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.loader img {
+     width: 280px;
+}
+
+/*--------------------------------------------------------------------- header area ---------------------------------------------------------------------*/
+
+.header {
+     font-family: poppins;
+     padding: 10px 0px;
+    background: #0a1931;
+     background-repeat: no-repeat;
+background-size: 100% 100%;
+background-position: center center;
+}
+
+.logo {
+     float: left;
+     position: relative;
+     padding-top: 2px;
+}
+
+
+
+.img-responsive {
+     max-width: 100%;
+}
+.padding_right_15_inner {
+     padding-right: 15px;
+}
+.padding_left_15_inner {
+     padding-left: 15px;
+}
+.dark_bg {
+     background: #114c7d;
+}
+
+/*--------------------------------------------------------------------- layout new css ---------------------------------------------------------------------*/
+
+
+.relative {
+     position: absolute;
+     top: 50%;
+     transform: translateY(-50%);
+     text-align: left;
+     bottom: auto;
+}
+
+.banner-main {
+     position: relative;
+     font-family: poppins;
+}
+.carousel-indicators li {
+    width: 25px;
+    height: 25px;
+    border-radius: 15px;
+    background-color: #0a1931;
+   
+}
+#myCarousel .carousel-indicators li { margin-bottom: 40px;}
+.banner-main .carousel-item img {width: 100%;}
+#myCarousel a.carousel-control-prev {display: none;}
+#myCarousel a.carousel-control-next {display: none;}
+.carousel-indicators .active {background-color:#1597bb;}
+
+.banner-main .carousel-caption span {
+     font-size: 50px;
+     font-weight: bold;
+     line-height: 60px;
+     color: #1597bb;
+     text-transform: uppercase;
+     padding-bottom: 10px;
+     display: block;
+}
+
+.banner-main .carousel-caption h1 {
+     color: #fff;
+     font-size: 110px;
+     line-height: 84px;
+     font-weight: bold;
+     padding-bottom: 20px;
+     text-transform: uppercase;
+}
+
+.banner-main .carousel-caption p {
+     font-size: 25px;
+     line-height: 31px;
+     padding: 6px 0px 50px 0px;
+}
+
+.banner-main .carousel-caption .buynow:hover {
+     border: #0a1931 solid 1px;
+     background: #0a1931;
+     color: #fff;
+}
+
+#myCarousel a.carousel-control-next {
+     position: absolute;
+     top: 40% !important;
+     left: inherit !important;
+     right: 17px !important;
+     width: 70px;
+     height: 70px;
+     border-radius: 35px;
+}
+
+#myCarousel a.carousel-control-prev {
+     position: absolute;
+     top: 40% !important;
+     left: 17px !important;
+     width: 70px;
+     height: 70px;
+     border-radius: 35px;
+}
+
+ul.social_icon {
+     list-style: none;
+     padding-top: 5px;
+}
+ul.social_icon li {
+     float: left;
+color: #fff;
+align-items: center;
+padding-right: 10px;
+margin-top: 17px;
+}
+ul.social_icon li:last-child {
+     padding-right: 0px;
+}
+ul.social_icon li a {
+color: #fff;
+width: 40px;
+height: 40px;
+border: solid #fff 1px;
+float: left;
+text-align: center;
+line-height: 40px;
+border-radius: 100%;
+font-size: 18px;
+} 
+
+ul.social_icon li a:hover {
+     background: #ff0000;
+border: solid #ff0000 1px;        
+color: #fff;
+}
+/** end banner **/
+.black {
+    color: #1597bb;
+    font-weight: 208;
+}
+
+.title {text-align: center; padding-bottom: 60px;}
+
+.title h2 {
+    padding: 0px 0px 6px 0px;
+text-transform: uppercase;
+font-weight: 500;
+color: #052501;
+line-height: 46px;
+border-bottom: #052501 solid 1px;
+font-size: 50px;
+max-width: 374px;
+width: 100%;
+margin: 0 auto;
+
+}
+
+.footer {background: #0a1931; padding: 90px 0px;} 
+ ul.loca li {
+    color: #fff;
+padding-bottom: 10px;
+display: flex;
+font-size: 16px;
+flex-wrap: wrap;
+}
+ ul.loca li:last-child {
+    padding-right: 0;
+}
+ ul.loca li a {
+   padding-right: 16px;
+color: #fff;
+margin-top: 4px;
+}
+ 
+ ul.Links_footer {
+     list-style: none;
+     margin: 0;
+     padding: 0;
+     width: 100%;
+     float: left;
+}
+ ul.Links_footer li a {
+    display: block;
+     color: #fff;
+     font-size: 17px;
+     padding-left: 16px;
+     margin-top: -34px;
+}
+ ul.Links_footer li a:hover{
+    color: #1597bb;
+}
+ ul.Links_footer li {
+    padding-bottom: 15px;
+    color: #1597bb;
+}
+ 
+ 
+
+ .hhh {
+    margin-bottom: 15px;
+}
+ .footer .newsletter h3 {
+     color: #fff;
+     font-size: 17px;
+     line-height: 30px;
+     display: block;
+     padding-bottom: 25px;
+     text-transform: uppercase;
+}
+ .footer .address .form-control {
+     padding: 10px 15px;
+     border: #ddd solid 1px;
+     margin-bottom: 20px;
+     box-shadow: inherit;
+     border-radius: 10px;
+}
+ .address  h3 {
+color: #fff;
+font-size: 29px;
+font-weight: 500;
+padding-top: 15px;
+padding-bottom: 3px;
+border-bottom: #1597bb solid 4px;
+margin-bottom: 20px;
+width: 226px;
+ }
+.address img {padding-bottom: 10px;}
+
+ .address p {
+     color: #fff;
+     padding-bottom: 20px;
+     font-size: 18px;
+line-height: 30px;}
+ .form-control:focus, .form-control:hover {
+     border: #ddd solid 1px !important;
+}
+ .footer .address .submit-btn {
+   padding: 8px 45px;
+border: #1597bb solid 1px;
+background: #1597bb;
+color: #fff;
+font-weight: 500;
+font-size: 19px;
+border-radius: 10px;
+}
+ .footer .address .submit-btn:hover {
+     background: #fff;
+     border: #fff solid 1px;
+     color: #1597bb;
+}
+.copyright {
+     background: #1597bb;
+     padding: 20px 0px 20px 0;
+}
+.copyright p {
+     color: #fff;
+     font-size: 16px;
+     text-align: center;
+     text-align: center;
+     margin: 0 auto;
+}
+.copyright a {
+     color: #ffff;
+}
+.copyright a:hover {
+     color: #000;
+}
+
+.special-page .relative  {text-align:center !important; }
+
+.special-page .footer {margin-top: 90px;}
