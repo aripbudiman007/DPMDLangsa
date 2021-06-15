@@ -19,6 +19,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="./assets/plugins/fontawesome-free/css/all.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="./assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="./assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="./assets/dist/css/adminlte.min.css">
   <!-- Google Font: Source Sans Pro -->
@@ -112,7 +115,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="?page=jenis_berkas" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Jenis Berkas</p>
                 </a>
@@ -158,7 +161,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       Anything you want
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2014-2019 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; 2021.</strong> Template by <a href="https://adminlte.io">AdminLTE.io</a>. All rights reserved.
   </footer>
 </div>
 <!-- ./wrapper -->
@@ -169,7 +172,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="./assets/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
 <script src="./assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- DataTables -->
+<script src="./assets/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="./assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="./assets/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="./assets/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
 <!-- AdminLTE App -->
 <script src="./assets/dist/js/adminlte.min.js"></script>
+<script>
+  $(function () {
+    $("#data-table").DataTable({
+      "responsive": true,
+      "autoWidth": false,
+    });
+  });
+</script>
 </body>
 </html>
