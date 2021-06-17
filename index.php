@@ -49,7 +49,7 @@
                         <div class="full">
                             <div class="center-desk">
                                 <div class="logo">
-                                    <a href="index.html"><img src="images/logo.png" alt="#"></a>
+                                    <a href="index.php"><img src="images/logo.png" alt="#"></a>
                                 </div>
                             </div>
                         </div>
@@ -57,9 +57,9 @@
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                       <div class="navbar-nav">
                         <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                        <a class="nav-item nav-link" href="#">Events</a>
-                        <a class="nav-item nav-link" href="#">Abouts</a>
-                        <a class="nav-item nav-link" href="#">Administrasi Penduduk</a>
+                        <a class="nav-item nav-link" href="berkas.php">Berkas</a>
+                        <!--<a class="nav-item nav-link" href="#">Abouts</a>-->
+                        <a class="nav-item nav-link" href="./admin/">Login</a>
                       </div>
                     </div>
                 </div>
@@ -108,10 +108,7 @@
                         <div class="carousel-caption relative">
                           <h1>DPMG</h1>
                           <span>KOTA LANGSA</span>
-
                           <p>"Terwujudnya Masyarakat yang Aman, Damai, Bermartabat,<br> Maju, Sejahtera, dan Islami"</p>
-                            
-
                         </div>
                     </div>
                 </div>
@@ -131,9 +128,9 @@
           <div class="intro-text left-0 text-center bg-faded p-5 rounded">
             <h2 class="section-heading mb-4">
               <span class="section-heading-upper">Kata</span>
-              <span class="section-heading-lower">Bpk Arip Budiman</span>
+              <span class="section-heading-lower">Bpk DR.H. Marzuki Hamid, MM</span>
             </h2><hr>
-            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati nisi at rem dolorem et blanditiis ex dolore voluptatum sed, in soluta earum magni, ea laborum totam autem quae impedit quaerat ratione culpa architecto labore! Aperiam.</p>
+            <p> Mari kita bersama-sama membangun Kota Langsa menjadi lebih baik dengan dimulai membangun masyarakat yang maju dan modern.</p>
             <hr><br>
           </div>
         </div>
@@ -154,21 +151,19 @@
                         <div class="address">
                             <h3>Quick links</h3>
                             <ul class="Links_footer">
-                                <li><img src="icon/3.png" alt="#" /> <a href="#"> Join Us</a> </li>
-                                <li><img src="icon/3.png" alt="#" /> <a href="#">Maintenance</a> </li>
-                                <li><img src="icon/3.png" alt="#" /> <a href="#">Language Packs</a> </li>
-                                <li><img src="icon/3.png" alt="#" /> <a href="#">LearnPress</a> </li>
-                                <li><img src="icon/3.png" alt="#" /> <a href="#">Release Status</a> </li>
+                                <li><img src="icon/3.png" alt="#" /> <a href="#">Home</a> </li>
+                                <li><img src="icon/3.png" alt="#" /> <a href="#">Berkas</a> </li>
+                                <li><img src="icon/3.png" alt="#" /> <a href="admin/login/login.php">Login</a> </li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                         <div class="address">
-                            <h3>Subcribe email</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do </p>
-                            <input class="form-control" placeholder="Your Email" type="type" name="Your Email">
-                            <button class="submit-btn">Submit</button>
+                            <h3>Saran</h3>
+                            <p>Isi dibawah ini dan berilah saran untuk kami </p>
+                             <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                            <button class="submit-btn">Send</button>
                         </div>
                     </div>
 
@@ -181,7 +176,7 @@
                                     <a href="#"><img src="icon/loc.png" alt="#" /></a>Kota Langsa
                                     <br>Indonesia </li>
                                 <li>
-                                    <a href="#"><img src="icon/email.png" alt="#" /></a>demo@gmail.com </li>
+                                    <a href="#"><img src="icon/email.png" alt="#" /></a>DPMG@gmail.com </li>
                                 <li>
                                     <a href="#"><img src="icon/call.png" alt="#" /></a>+62822-7741-1200 </li>
                             </ul>

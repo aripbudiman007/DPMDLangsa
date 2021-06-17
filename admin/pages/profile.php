@@ -1,3 +1,6 @@
+<?php
+$nik = $_SESSION['nik'];
+?>
 <section class="content-header">
     <div class="container-fluid">
         <div class="row mb-2">
@@ -28,27 +31,27 @@
             <table class="table">
                 <tr>
                     <td width="25%">NIK</td>
-                    <td>: 32072817069400004</td>
+                    <td>: <strong><?= $penduduk->get_detail_penduduk($nik, "nik") ?></strong></td>
                 </tr>
                 <tr>
                     <td>Nama Lengkap</td>
-                    <td>: Budiman Santoso</td>
+                    <td>: <strong><?= $penduduk->get_detail_penduduk($nik, "nama_lengkap") ?></strong></td>
                 </tr>
                 <tr>
                     <td>Jenis Kelamin</td>
-                    <td>: Bandung</td>
+                    <td>: <strong><?= $penduduk->get_detail_penduduk($nik, "jenis_kelamin") ?></strong></td>
                 </tr>
                 <tr>
                     <td>Tempat Lahir</td>
-                    <td>: Bandung</td>
+                    <td>: <strong><?= $penduduk->get_detail_penduduk($nik, "tempat_lahir") ?></strong></td>
                 </tr>
                 <tr>
                     <td>Tanggal Lahir</td>
-                    <td>: Budiman Santoso</td>
+                    <td>: <strong><?= $penduduk->get_detail_penduduk($nik, "tanggal_lahir") ?></strong></td>
                 </tr>
                 <tr>
                     <td>Alamat</td>
-                    <td>: Budiman Santoso</td>
+                    <td>: <strong><?= $penduduk->get_detail_penduduk($nik, "alamat") ?></strong></td>
                 </tr>
             </table>
         </div>

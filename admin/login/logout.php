@@ -8,5 +8,5 @@ session_start();
 	unset ($_SESSION ['password']);
 	unset ($_SESSION ['level']);
 	session_destroy();
-	redirectJS("login.php");
+	header("location:../../index.php");
 ?>

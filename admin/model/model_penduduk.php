@@ -213,12 +213,26 @@ class Penduduk {
         $data = $query->fetch_array();
         $row = $query->num_rows;
 
-        // if($row > 0){
-            return true;
-        // }else {
-        //     return 'error';
-        // }
+        if($row > 0){
+            return "ada";
+        }else {
+            return "tidak ada";
+        }
 
+    }
+
+    function get_detail_penduduk($nik, $field){
+        $sql = "SELECT * FROM tb_penduduk WHERE nik='".$nik."'";
+        $query = $this->koneksi()->query($sql);
+        $data = $query->fetch_array();
+
+        if($field == "nik"){return $data['nik'];}
+        elseif($field == "nama_lengkap"){return $data['nama_lengkap'];}
+        elseif($field == "jenis_kelamin"){return $data['jenis_kelamin'];}
+        elseif($field == "tempat_lahir"){return $data['tempat_lahir'];}
+        elseif($field == "tanggal_lahir"){return $data['tanggal_lahir'];}
+        elseif($field == "alamat"){return $data['alamat'];}
+        elseif($field == "status"){return $data['status'];}
     }
 }
 ?>

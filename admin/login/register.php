@@ -1,33 +1,16 @@
 <?php
+    include("../include/redirect.php");
     include_once("../model/class_login.php");
 
     $log = new Login();
 
-    if(isset($_POST['login'])){
+    if(isset($_POST['register'])){
+        $log->set_nik($_POST['nik']);
         $log->set_username($_POST['username']);
         $log->set_password(md5($_POST['password']));
 
-        $cek = $log->cek_login();
+        $cek = $log->cek_user();
 
-        if($cek == 0){ ?>
-            <script type="text/javascript">
-                alert('Belum Terdaftar');
-            </script>
-         <?php } else { 
-             if(($log->get_username() == $log->get_login("username")) AND ($log->get_password() == $log->get_login("password"))){
-                session_start(); 
-
-                $_SESSION['username'] = $log->get_login("username");
-                $_SESSION['password'] = $log->get_login("password");
-                $_SESSION['level'] = $log->get_login("level");
-                $_SESSION['nik'] = $log->get_login("nik");
-                header("location:./../");
-            } else { ?>
-                <script type="text/javascript">
-                alert('Username / Password Salah')
-                </script>
-            <?php } 
-        } 
     }
 ?>
 <!DOCTYPE html>
@@ -73,7 +56,7 @@
     </div>
 <?php } ?> 
   <div class="login-logo">
-    <a href="">Administrations</a>
+    <a href="">Form Registrasi</a>
   </div>
   <!-- /.login-logo -->
   <div class="card">
@@ -81,11 +64,19 @@
       <p class="login-box-msg">DPMG Kota Langsa</p>
 
       <form action="" method="POST">
+      <div class="input-group mb-3">
+          <input type="text" name="nik" class="form-control" placeholder="NIK">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-users"></span>
+            </div>
+          </div>
+        </div>
         <div class="input-group mb-3">
           <input type="text" name="username" class="form-control" placeholder="Username">
           <div class="input-group-append">
             <div class="input-group-text">
-              <span class="fas fa-envelope"></span>
+              <span class="fas fa-user"></span>
             </div>
           </div>
         </div>
@@ -100,10 +91,10 @@
         <div class="row">
           <!-- /.col -->
           <div class="col-6">
-            <button type="submit" name="login" class="btn btn-primary btn-block">Sign In</button>
+            <button type="submit" name="register" class="btn btn-primary btn-block">Submit</button>
           </div>
           <div class="col-6">
-            <a href="register.php" class="btn btn-danger" style="width:100%">Register</a>
+            <a href="login.php" class="btn btn-danger" style="width:100%">Batal</a>
           </div>
           <!-- /.col -->
         </div>

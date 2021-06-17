@@ -17,6 +17,7 @@
     $nik= $_SESSION['nik'];
     $msg = isset($_GET['msg']) ? $_GET['msg'] : null;
 
+
     if($msg == "berhasil"){
 ?>
     <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -52,7 +53,15 @@
                     <input type="file" name="ktp" class="form-control">
                 </div>
                 <div class="form-group">
-                    <label for=""><?php if($penduduk->get_status_berkas($_SESSION['nik'],'1') != 1){ echo "<span style='color:red'>* Bekas Belum Lengkap</span>";}else{echo "<span style='color:green'>* Berkas Sudah Lengkap</span>";} ?></label>
+                    <label for="">
+                        <?php
+                            if($penduduk->get_status_berkas($_SESSION['nik'],'1') === "ada"){
+                                echo "<span style='color:green'>* Berkas Sudah Lengkap</span>";
+                            }elseif($penduduk->get_status_berkas($_SESSION['nik'],'1') === "tidak ada"){
+                                echo "<span style='color:red'>* Bekas Belum Lengkap</span>";
+                            }
+                        ?>
+                    </label>
                 </div>
                 <div class="form-group col-md-2">
                     <input type="submit" name="upload_ktp" value="Upload" class="btn btn-primary">
@@ -66,7 +75,15 @@
                     <input type="file" name="kk" class="form-control">
                 </div>
                 <div class="form-group">
-                    <label for=""><?php if($penduduk->get_status_berkas($_SESSION['nik'],'1') != 1){ echo "<span style='color:red'>* Bekas Belum Lengkap</span>";}else{echo "<span style='color:green'>* Berkas Sudah Lengkap</span>";} ?></label>
+                    <label for="">
+                        <?php
+                            if($penduduk->get_status_berkas($_SESSION['nik'],'2') === "ada"){
+                                echo "<span style='color:green'>* Berkas Sudah Lengkap</span>";
+                            }elseif($penduduk->get_status_berkas($_SESSION['nik'],'2') === "tidak ada"){
+                                echo "<span style='color:red'>* Bekas Belum Lengkap</span>";
+                            }
+                        ?>
+                    </label>
                 </div>
                 <div class="form-group col-md-2">
                     <input type="submit" name="upload_kk" value="Upload" class="btn btn-primary">
@@ -80,7 +97,15 @@
                     <input type="file" name="akte" class="form-control">
                 </div>
                 <div class="form-group">
-                    <label for=""><?php if($penduduk->get_status_berkas($_SESSION['nik'],'3') != 3){ echo "<span style='color:red'>* Bekas Belum Lengkap</span>";}else{echo "<span style='color:green'>* Berkas Sudah Lengkap</span>";} ?></label>
+                    <label for="">
+                        <?php
+                            if($penduduk->get_status_berkas($_SESSION['nik'],'3') === "ada"){
+                                echo "<span style='color:green'>* Berkas Sudah Lengkap</span>";
+                            }elseif($penduduk->get_status_berkas($_SESSION['nik'],'3') === "tidak ada"){
+                                echo "<span style='color:red'>* Bekas Belum Lengkap</span>";
+                            }
+                        ?>
+                    </label>
                 </div>
                 <div class="form-group col-md-2">
                     <input type="submit" name="upload_akte" value="Upload" class="btn btn-primary">
